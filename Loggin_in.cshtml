@@ -1,0 +1,160 @@
+﻿@page
+@model Ballerinas.Views.Home.loggin_inModel
+@{
+}
+
+<style>
+  body{
+      font-family: 'Poppins',sans-serif;
+      background-color: rgb(11, 29, 29);
+  }
+  h1{
+      text-align: center;
+  }
+  input{
+      color: blue;
+  }
+  input[type="password"]:focus{
+      box-shadow: 0 0 5px rgba(246,8,118, 0.8);
+  border:1px solid  rgba(246,8,118, 0.8);
+    }
+.container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:100%;
+    height: 100vh;
+}
+.form-horizontal{
+    width: 320px;
+    background-color: aliceblue;
+    padding: 25px 13px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+}
+.control-label{
+    text-align: left;
+    padding-bottom: 4px;
+}
+.progress{
+    height:11px
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.show-pass{
+    position: absolute;
+    top:5%;
+    right: 8%;
+}
+.progress-bar-danger{
+    background-color:red ;
+}
+
+.progress-bar-warning{
+    background-color: #ffad00;
+}
+
+.progress-bar-success{
+    background-color: green;
+}
+.fa-eye{
+    cursor: pointer;
+}
+.fa-circle{
+    font-size: 11px;
+    padding: 5px;
+}
+.fa-check{
+    color: green;
+}
+
+</style>
+
+<div class="container">
+
+    <form id="validateForm" class="form-horizontal">
+        <h1>Create Account</h1>
+        <h3>
+            Login/Create account.
+        </h3>
+        <fieldset>
+            <div class="form-group">
+                <label for="textinput" class="col-md-12 control-label" style="font-weight: 600;">
+                    Email
+                </label>
+                <div class="col-md-12">
+                    <input type="email" id="email" class="form-control input-md" name="textinput" autocomplete="off" placeholder="Enter Email">
+                </div>
+                <br>
+                <label for="passwordInput" class="col-md-12 control-label" style="font-weight: 600;">
+                    Password
+                </label>
+                <div class="col-md-12">
+                    <input type="password" id="password" class="form-control input-md"
+                           name="passwordInput" placeholder="Enter your password">
+                    <span class="show-pass" onclick="toggle()">
+                        <i class="fa fa-eye" onclick="myFunction(this)"></i>
+                    </span>
+                    <div class="popover-password">
+                        <p><span id=result></span></p>
+                        <div class="progress">
+                            <div id="password-strength" class="progress-bar"
+                                 role="progressbar" aria-valuenow="40"
+                                 aria-valuemin="0" aria-valuemax="100"
+                                 style="width:0%"></div>
+                        </div>
+                        <br>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="low-upper-case">
+                                    <i class="fa fa-circle" aria-hidden="true">
+                                    </i>Lowercase &amp;Uppercase
+                                </span>
+                            </li>
+                            <li>
+                                <span class="one-number">
+                                    <i class="fa fa-circle" aria-hidden="true">
+                                    </i>Number (0-9)
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="one-special-char">
+                                    <i class="fa fa-circle" aria-hidden="true">
+                                    </i>Special Character (!#$%^&*);
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="eight-character">
+                                    <i class="fa fa-circle" aria-hidden="true">
+                                    </i>Atleast 8 Characters
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+
+                 @Html.ActionLink("Create account", "APPLYNOW")
+
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script src="~/js/JavaScripts.js"></script>
+@*<script src="strengthChecker.js">
+
+</script>
+
+<script src="">
+
+</script>*@
+<button style="border: #498197; size: 15px;" onclick="backFunction()">Go Back</button>
+                        <button style="border: #2b6f8a; size: 15px;" onclick="history.forward()">Go Forward</button>
+                        <button style="border: #2b6f8a; size: 15px;" onclick="history.go(2)">Go Forward 2 Pages</button>
+
+                        

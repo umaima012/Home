@@ -1,0 +1,108 @@
+﻿@page
+@model Ballerinas.Views.Home.contactModel
+@{
+}
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+
+    </ul>
+    <div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/NewFolder/background1 (5).jpeg" alt="Los Angeles" width="100%" height="300">
+            <div class="carousel-caption">
+                <h1>CONTACT US</h1>
+                <p>Contactus>Home></p>
+            </div>
+        </div>
+        </div>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col bg-secondary">
+                    <h2>Address</h2>
+                    <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                </div>
+
+                <div class="col bg-info">
+                    <h2>Contact Number</h2>
+                    <p>+ 1235 2355 98</p>
+                </div>
+
+
+                <div class="col bg-secondary">
+                    <h2>Email Address</h2>
+                    <p>ballerinas@gmail.com</p>
+                </div>
+
+                <div class="col bg-info">
+                    <h2>Website</h2>
+                    <a href="file:///C:/Users/Akzo/Desktop/Web%20assignment.html">file:///C:/Users/Akzo/Desktop/Web%20assignment.html</a>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <br>
+                    <div class="container-fluid">
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <form>
+                        <label for="fname"></label><br>
+                        <input type="text" id="fname" name="fname" value="Your Name" cols="30"><br>
+                        <label for="lname"></label><br>
+                        <input type="text" id="lname" name="lname" value="Your Email" cols="30"><br>
+                        <label for="subj"></label><br>
+                        <input type="text" id="subj" name="lname" value="Subject" cols="30"><br><br>
+<textarea name="message" rows="20" cols="30">
+Send message
+</textarea><br>
+
+
+                        <button type="submit" style="border-radius: 15px ; background-color:#1bbacf; margin: left;">SUBMIT</button>
+
+                        <p id="demo"></p>
+
+
+
+                        <button style="border: #498197; size: 15px;" onclick="backFunction()">Go Back</button>
+                        <button style="border: #2b6f8a; size: 15px;" onclick="history.forward()">Go Forward</button>
+                        <button style="border: #2b6f8a; size: 15px;" onclick="history.go(2)">Go Forward 2 Pages</button>
+
+                        <script>
+        function backFunction()
+        {
+            history.back();
+        }
+                        </script>
+
+
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br>
+
+
